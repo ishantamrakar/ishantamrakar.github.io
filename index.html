@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishan Tamrakar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0f0f;
+      --surface: #161616;
+      --border: #222;
+      --text: #e8e8e8;
+      --muted: #888;
+      --accent: #aaa;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 72px 24px 96px;
+      line-height: 1.6;
+    }
+
+    .container { max-width: 680px; margin: 0 auto; }
+
+    /* Header */
+    header { margin-bottom: 56px; }
+    header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+    header .role { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
+    header .role a { color: var(--muted); text-decoration: none; border-bottom: 1px solid #333; }
+    header .role a:hover { color: var(--accent); border-color: #555; }
+
+    .links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .links a {
+      padding: 5px 12px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .links a:hover { color: var(--text); border-color: #444; }
+
+    /* Sections */
+    section { margin-bottom: 52px; }
+    section h2 {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* About */
+    .about p { color: #bbb; font-size: 0.95rem; max-width: 580px; }
+    .about p + p { margin-top: 12px; }
+
+    /* Research items */
+    .item-list { list-style: none; }
+    .item-list li {
+      border-top: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .item-list li:last-child { border-bottom: 1px solid var(--border); }
+    .item-title { font-size: 0.92rem; font-weight: 500; margin-bottom: 4px; }
+    .item-title a { color: var(--text); text-decoration: none; }
+    .item-title a:hover { color: var(--accent); }
+    .item-meta { color: var(--muted); font-size: 0.82rem; }
+
+    /* Projects / demos */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 520px) { .project-grid { grid-template-columns: 1fr; } }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+      text-decoration: none;
+      color: var(--text);
+      display: block;
+      transition: border-color 0.15s;
+    }
+    .project-card:hover { border-color: #444; }
+    .project-card h3 { font-size: 0.92rem; font-weight: 600; margin-bottom: 6px; }
+    .project-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .project-card .tag {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: #555;
+      border: 1px solid #2a2a2a;
+      border-radius: 4px;
+      padding: 2px 7px;
+    }
+
+    footer {
+      margin-top: 80px;
+      color: #444;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Ishan Tamrakar</h1>
+      <p class="role">
+        PhD student in Computer Science &mdash;
+        <a href="https://prg.cs.umd.edu" target="_blank">Perception &amp; Robotics Group</a>,
+        University of Maryland
+      </p>
+      <div class="links">
+        <a href="mailto:itamraka@umd.edu">itamraka@umd.edu</a>
+        <a href="https://github.com/ishantamrakar" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/ishantamrakar" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+      </div>
+    </header>
+
+    <section class="about">
+      <h2>About</h2>
+      <p>
+        I'm a PhD student at UMD advised by
+        <a href="https://www.cs.umd.edu/~yiannis/" target="_blank" style="color:#bbb; border-bottom:1px solid #333;">Yiannis Aloimonos</a>
+        and
+        <a href="https://isr.umd.edu/clark/faculty/541/Cornelia-Ferm%FCller" target="_blank" style="color:#bbb; border-bottom:1px solid #333;">Cornelia Fermüller</a>.
+        My research sits at the intersection of computer vision, event cameras, and vision-language models for robotic perception.
+      </p>
+      <p>
+        I'm interested in building systems that understand the world the way robots need to — reliably, in real time, and under conditions where traditional cameras struggle. I also TA for introductory CS courses and enjoy making algorithms approachable through interactive demos.
+      </p>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <ul class="item-list">
+        <li>
+          <div class="item-title">Beyond the Prompt: Knowledge Boundary Detection in LLMs — A Systematic Literature Review</div>
+          <div class="item-meta">Tamrakar, I., et al. &mdash; 2025</div>
+        </li>
+        <li>
+          <div class="item-title">Reproducibility in CS: An Empirical Multi-Year Replication Study of Neuro-Symbolic AI</div>
+          <div class="item-meta">Tamrakar, I., et al. &mdash; 2025</div>
+        </li>
+        <li>
+          <div class="item-title">
+            <a href="https://doi.org/10.48550/arXiv.2304.09412" target="_blank">hDesigner: Real-Time Haptic Feedback Pattern Designer</a>
+          </div>
+          <div class="item-meta">Tamrakar, I., et al. &mdash; arXiv 2023</div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Demos &amp; Projects</h2>
+      <div class="project-grid">
+        <a class="project-card" href="https://ishantamrakar.github.io/algorithms-to-live-by">
+          <h3>Algorithms to Live By</h3>
+          <p>Interactive visual demos for the book by Brian Christian &amp; Tom Griffiths.</p>
+          <span class="tag">ongoing</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      College Park, MD &mdash; last updated 2025
+    </footer>
+
+  </div>
+</body>
+</html>
