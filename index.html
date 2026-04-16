@@ -8,12 +8,12 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0f0f0f;
-      --surface: #161616;
-      --border: #222;
-      --text: #e8e8e8;
-      --muted: #888;
-      --accent: #aaa;
+      --bg: #ffffff;
+      --surface: #f7f7f7;
+      --border: #e5e5e5;
+      --text: #111;
+      --muted: #666;
+      --accent: #333;
     }
 
     body {
@@ -27,12 +27,11 @@
 
     .container { max-width: 680px; margin: 0 auto; }
 
-    /* Header */
     header { margin-bottom: 56px; }
     header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
     header .role { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
-    header .role a { color: var(--muted); text-decoration: none; border-bottom: 1px solid #333; }
-    header .role a:hover { color: var(--accent); border-color: #555; }
+    header .role a { color: var(--muted); text-decoration: none; border-bottom: 1px solid #ddd; }
+    header .role a:hover { color: var(--accent); border-color: #aaa; }
 
     .links { display: flex; flex-wrap: wrap; gap: 10px; }
     .links a {
@@ -44,24 +43,23 @@
       font-size: 0.82rem;
       transition: color 0.15s, border-color 0.15s;
     }
-    .links a:hover { color: var(--text); border-color: #444; }
+    .links a:hover { color: var(--text); border-color: #aaa; }
 
-    /* Sections */
     section { margin-bottom: 52px; }
     section h2 {
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #555;
+      color: #aaa;
       margin-bottom: 20px;
     }
 
-    /* About */
-    .about p { color: #bbb; font-size: 0.95rem; max-width: 580px; }
+    .about p { color: #444; font-size: 0.95rem; max-width: 580px; }
     .about p + p { margin-top: 12px; }
+    .about a { color: #444; border-bottom: 1px solid #ddd; text-decoration: none; }
+    .about a:hover { color: #111; border-color: #aaa; }
 
-    /* Research items */
     .item-list { list-style: none; }
     .item-list li {
       border-top: 1px solid var(--border);
@@ -69,11 +67,10 @@
     }
     .item-list li:last-child { border-bottom: 1px solid var(--border); }
     .item-title { font-size: 0.92rem; font-weight: 500; margin-bottom: 4px; }
-    .item-title a { color: var(--text); text-decoration: none; }
-    .item-title a:hover { color: var(--accent); }
+    .item-title a { color: var(--text); text-decoration: none; border-bottom: 1px solid #ddd; }
+    .item-title a:hover { border-color: #aaa; }
     .item-meta { color: var(--muted); font-size: 0.82rem; }
 
-    /* Projects / demos */
     .project-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -91,22 +88,22 @@
       display: block;
       transition: border-color 0.15s;
     }
-    .project-card:hover { border-color: #444; }
+    .project-card:hover { border-color: #aaa; }
     .project-card h3 { font-size: 0.92rem; font-weight: 600; margin-bottom: 6px; }
     .project-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
     .project-card .tag {
       display: inline-block;
       margin-top: 10px;
       font-size: 0.75rem;
-      color: #555;
-      border: 1px solid #2a2a2a;
+      color: #aaa;
+      border: 1px solid #e0e0e0;
       border-radius: 4px;
       padding: 2px 7px;
     }
 
     footer {
       margin-top: 80px;
-      color: #444;
+      color: #bbb;
       font-size: 0.8rem;
     }
   </style>
@@ -117,15 +114,15 @@
     <header>
       <h1>Ishan Tamrakar</h1>
       <p class="role">
-        PhD student in Computer Science &mdash;
+        PhD student in Computer Science,
         <a href="https://prg.cs.umd.edu" target="_blank">Perception &amp; Robotics Group</a>,
-        University of Maryland
+        University of Maryland - College Park 
       </p>
       <div class="links">
         <a href="mailto:itamraka@umd.edu">itamraka@umd.edu</a>
         <a href="https://github.com/ishantamrakar" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/ishantamrakar" target="_blank">LinkedIn</a>
-        <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=vMjFKI0AAAAJ" target="_blank">Google Scholar</a>
       </div>
     </header>
 
@@ -133,13 +130,13 @@
       <h2>About</h2>
       <p>
         I'm a PhD student at UMD advised by
-        <a href="https://www.cs.umd.edu/~yiannis/" target="_blank" style="color:#bbb; border-bottom:1px solid #333;">Yiannis Aloimonos</a>
+        <a href="https://www.cs.umd.edu/~yiannis/" target="_blank">Yiannis Aloimonos</a>
         and
-        <a href="https://isr.umd.edu/clark/faculty/541/Cornelia-Ferm%FCller" target="_blank" style="color:#bbb; border-bottom:1px solid #333;">Cornelia Fermüller</a>.
+        <a href="https://isr.umd.edu/clark/faculty/541/Cornelia-Ferm%FCller" target="_blank">Cornelia Fermüller</a>.
         My research sits at the intersection of computer vision, event cameras, and vision-language models for robotic perception.
       </p>
       <p>
-        I'm interested in building systems that understand the world the way robots need to — reliably, in real time, and under conditions where traditional cameras struggle. I also TA for introductory CS courses and enjoy making algorithms approachable through interactive demos.
+        I'm interested in building systems that understand the world the way robots need to: reliably, in real time, and under conditions where traditional cameras struggle. I also TA for introductory CS courses and enjoy making algorithms approachable through interactive demos.
       </p>
     </section>
 
@@ -147,18 +144,18 @@
       <h2>Publications</h2>
       <ul class="item-list">
         <li>
-          <div class="item-title">Beyond the Prompt: Knowledge Boundary Detection in LLMs — A Systematic Literature Review</div>
-          <div class="item-meta">Tamrakar, I., et al. &mdash; 2025</div>
+          <div class="item-title">Beyond the Prompt: Knowledge Boundary Detection in LLMs, A Systematic Literature Review</div>
+          <div class="item-meta">Tamrakar, I., et al. &nbsp; 2025</div>
         </li>
         <li>
           <div class="item-title">Reproducibility in CS: An Empirical Multi-Year Replication Study of Neuro-Symbolic AI</div>
-          <div class="item-meta">Tamrakar, I., et al. &mdash; 2025</div>
+          <div class="item-meta">Tamrakar, I., et al. &nbsp; 2025</div>
         </li>
         <li>
           <div class="item-title">
             <a href="https://doi.org/10.48550/arXiv.2304.09412" target="_blank">hDesigner: Real-Time Haptic Feedback Pattern Designer</a>
           </div>
-          <div class="item-meta">Tamrakar, I., et al. &mdash; arXiv 2023</div>
+          <div class="item-meta">Tamrakar, I., et al. &nbsp; arXiv 2023</div>
         </li>
       </ul>
     </section>
@@ -168,14 +165,14 @@
       <div class="project-grid">
         <a class="project-card" href="https://ishantamrakar.github.io/algorithms-to-live-by">
           <h3>Algorithms to Live By</h3>
-          <p>Interactive visual demos for the book by Brian Christian &amp; Tom Griffiths.</p>
+          <p>Interactive visual demos for the book by Brian Christian and Tom Griffiths.</p>
           <span class="tag">ongoing</span>
         </a>
       </div>
     </section>
 
     <footer>
-      College Park, MD &mdash; last updated 2025
+      College Park, MD
     </footer>
 
   </div>
